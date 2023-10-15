@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      uri: ${DB_CONNECTION_STRING}
+      database : Task
+springdoc:
+  swagger-ui:
+    path: /swagger-doc/
+
