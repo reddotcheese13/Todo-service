@@ -5,5 +5,5 @@ spring:
       database : Task
 springdoc:
   swagger-ui:
-    path: /swagger-doc/
+    disable-swagger-default-url: true
 

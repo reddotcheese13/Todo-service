@@ -1,0 +1,27 @@
+# Compiled class files
+target/
+
+# Maven
+log/
+target/
+mvnw
+mvnw.cmd
+.idea/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.springBeans
+
+# IntelliJ
+*.iml
+*.iws
+*.ipr
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
