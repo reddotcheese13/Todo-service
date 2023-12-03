@@ -4,6 +4,8 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
+
 @Data
 @Document
 public class Todo {
@@ -12,7 +14,7 @@ public class Todo {
     private int rowNumber;
     private String rowDescription;
     private String assignedTo;
-    private String deadline;
+    private LocalDate deadline;
     private boolean completeStatus;
 }
 
