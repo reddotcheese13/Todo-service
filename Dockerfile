@@ -11,17 +11,17 @@ COPY src ./src
 # Build the application
 RUN mvn clean package -DskipTests
 
-# Use the AdoptOpenJDK base image for the runtime image
-FROM adoptopenjdk/openjdk17:alpine-jre
+# Use the official OpenJDK base image for the runtime image
+FROM openjdk:17-jre-alpine
 
 # Set the working directory in the container
 WORKDIR /app
 
 # Copy the JAR file from the builder stage
-COPY --from=builder /app/target/your-application-name.jar ./your-application-name.jar
+COPY --from=builder /app/target/TodoApplication.jar ./TodoApplication.jar
 
 # Expose the port your application runs on
 EXPOSE 8080
 
 # Specify the command to run on container start
-CMD ["java", "-jar", "your-application-name.jar"]
+CMD ["java", "-jar", "TodoApplication.jar"]
