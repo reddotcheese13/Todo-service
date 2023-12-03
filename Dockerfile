@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Use the official OpenJDK Alpine base image for the runtime image
-FROM openjdk:17-jre-alpine
+FROM openjdk:17-jdk-alpine
 
 # Set the working directory in the container
 WORKDIR /app
