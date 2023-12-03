@@ -11,7 +11,7 @@ COPY src ./src
 # Build the application
 RUN mvn clean package -DskipTests
 
-# Use the official OpenJDK base image for the runtime image
+# Use the official OpenJDK Alpine base image for the runtime image
 FROM openjdk:17-jre-alpine
 
 # Set the working directory in the container
