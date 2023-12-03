@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Use the AdoptOpenJDK base image for the runtime image
-FROM adoptopenjdk:17-jre-hotspot
+FROM adoptopenjdk/openjdk17:alpine-jre
 
 # Set the working directory in the container
 WORKDIR /app
