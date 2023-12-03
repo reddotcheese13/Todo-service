@@ -8,8 +8,8 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-# Build the application
-RUN mvn clean package -DskipTests
+# Build the application and explicitly set the JAR file name
+RUN mvn clean package -DskipTests -DfinalName=TodoApplication
 
 # Use the official OpenJDK Alpine base image for the runtime image
 FROM openjdk:17-jdk-alpine
